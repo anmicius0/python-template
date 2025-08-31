@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-template"
+version = "2025.08.31"
+description = "A small, personal Python project template"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Your Name", email = "your.email@example.com" },
+]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+dev = []
+
+[project.scripts]
+# Installable console script (after pip install -e .)
+myproject = "myproject.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = ["*.json", "*.yaml", "*.yml"]
